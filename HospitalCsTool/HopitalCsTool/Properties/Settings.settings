@@ -1,0 +1,62 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HopitalCsTool.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="gmailid" Type="System.String" Scope="User">
+      <Value Profile="(Default)">csh@radnet.kr</Value>
+    </Setting>
+    <Setting Name="gmailpw" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1q2w3e4r1!</Value>
+    </Setting>
+    <Setting Name="nccvpnid" Type="System.String" Scope="User">
+      <Value Profile="(Default)">os1005</Value>
+    </Setting>
+    <Setting Name="nccvpnpw" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1234$!@#qwe</Value>
+    </Setting>
+    <Setting Name="zolvuezippath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\downloadedFiles\\</Value>
+    </Setting>
+    <Setting Name="onpacsshotcut" Type="System.String" Scope="User">
+      <Value Profile="(Default)">@echo off
+
+&gt;nul 2&gt;&amp;1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+
+if '%errorlevel%' NEQ '0' (
+
+    echo 관리 권한을 요청 ...
+
+    goto UACPrompt
+
+) else ( goto gotAdmin )
+
+:UACPrompt
+
+    echo Set UAC = CreateObject^("Shell.Application"^) &gt; "%temp%\getadmin.vbs"
+
+    set params = %*:"=""
+
+    echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 &gt;&gt; "%temp%\getadmin.vbs"
+
+
+
+    "%temp%\getadmin.vbs"
+
+    rem del "%temp%\getadmin.vbs"
+
+    exit /B
+
+
+
+:gotAdmin
+
+c:\progra~1\intern~1\iexplore.exe https://www.onpacs.com/Login.aspx</Value>
+    </Setting>
+    <Setting Name="cv3path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\downloadedFiles\OptimumInstaller.exe</Value>
+    </Setting>
+    <Setting Name="BRHCopypath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\FILEDATA</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
